@@ -1,7 +1,5 @@
 # Karlshamn Energi Training Portal
 
-![Karlshamn Energi Logo](https://im16.inviewer.se/skiss/99/99KEOU1WQI.jpg)
-
 ## 📚 About
 
 This repository contains the Karlshamn Energi Training Portal, a web-based application designed to provide essential safety and security training for employees and contractors. The portal offers training modules in both Swedish and English, ensuring comprehensive coverage for all personnel.
