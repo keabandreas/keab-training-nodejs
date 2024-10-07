@@ -14,7 +14,7 @@ function submitForm() {
         })
         .then(response => response.text())
         .then(data => {
-            alert('Thank you for completing the training. A notification has been sent.');
+            nextSlide(); // Move to the thank you slide
         })
         .catch((error) => {
             console.error('Error:', error);
