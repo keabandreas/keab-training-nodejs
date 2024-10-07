@@ -402,10 +402,12 @@
         } else if (slide.type === 'conclusion') {
             // Add this block for the conclusion slide
             slideContent += `<div class="button-container"><button onclick="submitForm()">Send</button></div>`;
+        } else if (slide.type === 'thankYou') {
+        // No additional buttons needed for the thank you slide
         } else if (slide.type === 'introduction') {
-            slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
+        slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
         } else {
-            slideContent += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
+        slideContent += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
         }
 
         slideContent += `</div>`;
