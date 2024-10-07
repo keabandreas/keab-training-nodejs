@@ -55,23 +55,14 @@ app.post('/submit-form', (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent successfully:', info.response);
-      
-      // Append to CSV file
-      const csvLine = `${firstName},${lastName},${company},${email},${new Date().toISOString()}\n`;
-      fs.appendFile(path.join(__dirname, 'completions.csv'), csvLine, (err) => {
-        if (err) {
-          console.error('Error writing to CSV:', err);
-          res.status(500).send('Error saving data');
-        } else {
-          res.status(200).send('Form submitted successfully');
-        }
-      });
+      res.status(200).send('Email sent successfully');
     }
   });
 });
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${port}`);
+  
   // Test SMTP connection
   transporter.verify((error, success) => {
     if (error) {
