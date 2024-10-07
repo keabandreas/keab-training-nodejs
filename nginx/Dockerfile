@@ -1,13 +1,13 @@
 FROM nginx:alpine
 
-# Remove the default Nginx configuration file
-RUN rm /etc/nginx/conf.d/default.conf
+# Copy the Nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy the custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/
+# Copy your static files
+COPY *.html /usr/share/nginx/html/
 
-# Copy the landing page
-COPY ../public/index.html /usr/share/nginx/html/index.html
+# If you have other static assets, copy them as well
+# COPY assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80
 

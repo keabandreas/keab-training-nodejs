@@ -4,7 +4,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:lang',
+        source: '/:lang(en|sv)',
         destination: '/?lang=:lang',
       },
     ]
@@ -12,4 +12,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
