@@ -378,7 +378,7 @@
         const slide = slides[currentSlide];
         let slideContent = `<div class="slide">`;
         slideContent += slide.content;
-
+    
         if (slide.type === 'question') {
             if (slide.multipleChoice) {
                 slideContent += `<div class="options-container">`;
@@ -400,16 +400,16 @@
             }
             slideContent += `<div id="feedback" class="feedback"></div>`;
         } else if (slide.type === 'conclusion') {
-            // Add this block for the conclusion slide
-            slideContent += `<div class="button-container"><button onclick="submitForm()">Send</button></div>`;
+            // The form and send button are already in the slide content
+            // No need to add an extra button here
         } else if (slide.type === 'thankYou') {
-        // No additional buttons needed for the thank you slide
+            // No additional buttons needed for the thank you slide
         } else if (slide.type === 'introduction') {
-        slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
+            slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
         } else {
-        slideContent += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
+            slideContent += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
         }
-
+    
         slideContent += `</div>`;
         slideContainer.innerHTML = slideContent;
         resizeImages();
