@@ -342,7 +342,7 @@
                             <input type="email" id="email" required>
                         </div>
                         <div class="button-container">
-                            <button type="button" onclick="submitForm()">Send</button>
+                            <button type="button" onclick="submitForm()">Skicka</button>
                         </div>
                     </form>
                 `
@@ -390,7 +390,7 @@
                         </div>`;
                 });
                 slideContent += `</div>`;
-                slideContent += `<div class="button-container"><button onclick="checkMultipleAnswers()">Submit</button></div>`;
+                slideContent += `<div class="button-container"><button onclick="checkMultipleAnswers()">Skicka</button></div>`;
             } else {
                 slideContent += `<div class="button-container">`;
                 slide.options.forEach(option => {
@@ -405,7 +405,7 @@
         } else if (slide.type === 'thankYou') {
             // No additional buttons needed for the thank you slide
         } else if (slide.type === 'introduction') {
-            slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
+            slideContent += `<div class="button-container"><button onclick="nextSlide()">Påbörja utbildning</button></div>`;
         } else {
             slideContent += `<div class="button-container"><button onclick="nextSlide()">Nästa</button></div>`;
         }
@@ -419,11 +419,11 @@
             const slide = slides[currentSlide];
             const feedbackElement = document.getElementById('feedback');
             if (answer === slide.correctAnswer) {
-                feedbackElement.textContent = `Correct! ${slide.explanation}`;
+                feedbackElement.textContent = `Korrekt! ${slide.explanation}`;
                 feedbackElement.className = 'feedback correct';
-                feedbackElement.innerHTML += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
+                feedbackElement.innerHTML += `<div class="button-container"><button onclick="nextSlide()">Nästa</button></div>`;
         } else {
-                feedbackElement.textContent = `Incorrect. ${slide.explanation} Please try again.`;
+                feedbackElement.textContent = `Inkorrekt. ${slide.explanation} Var god försök igen.`;
                 feedbackElement.className = 'feedback incorrect';
             }
         }
@@ -437,11 +437,11 @@
                       selectedAnswers.every(answer => slide.correctAnswers.includes(answer));
 
             if (isCorrect) {
-                feedbackElement.textContent = `Correct! ${slide.explanation}`;
+                feedbackElement.textContent = `Korrekt! ${slide.explanation}`;
                 feedbackElement.className = 'feedback correct';
-                feedbackElement.innerHTML += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
+                feedbackElement.innerHTML += `<div class="button-container"><button onclick="nextSlide()">Nästa</button></div>`;
             } else {
-                feedbackElement.textContent = `Incorrect. ${slide.explanation} Please try again.`;
+                feedbackElement.textContent = `Inkorrekt. ${slide.explanation} Var god försök igen.`;
                 feedbackElement.className = 'feedback incorrect';
             }
         }
