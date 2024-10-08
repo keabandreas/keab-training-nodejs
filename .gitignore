@@ -2,3 +2,4 @@ node_modules/
 *.log
 .env
 public/email-config.json
+completions.csv

@@ -143,7 +143,7 @@
                 content: `
                     <h2><center>Allmän Säkerhet</center></h2>
                     <div class="info-slide">
-                    <p><centerVälkommen till Karlshamn Energi. Det är viktigt för oss att säkerhet kring våra verksamheter hålls högt. Vi är en samhällsviktig verksamhet och med det kommer ett stort ansvar. Det ansvaret gäller även för er som anlitas i någon form av oss. De ordnings- och säkerhetsregler som presenteras i den här utbildningen är bara en kortfattad sammanställning av det regelverk vi omfattas av.</center></p>
+                    <p><center>Välkommen till Karlshamn Energi. Det är viktigt för oss att säkerhet kring våra verksamheter hålls högt. Vi är en samhällsviktig verksamhet och med det kommer ett stort ansvar. Det ansvaret gäller även för er som anlitas i någon form av oss. De ordnings- och säkerhetsregler som presenteras i den här utbildningen är bara en kortfattad sammanställning av det regelverk vi omfattas av.</center></p>
                     </div>
                 `
             },
@@ -244,7 +244,7 @@
                 `,
                 options: ['Ja', 'Nej'],
                 correctAnswer: 'Nej',
-                explanation: 'Det är inte tillåtet att fotografera på Karlshamn Energi's anläggningar.'
+                explanation: "Det är inte tillåtet att fotografera på Karlshamn Energi's anläggningar."
             },
             {
                 type: 'question',
@@ -321,7 +321,7 @@
             {
                 type: 'conclusion',
                 content: `
-                    <h2><center>Utbildning avslutad.e</center></h2>
+                    <h2><center>Utbildning avslutad</center></h2>
                     <p>Tack för att du har avslutat Karlshamn Energi's utbildning för tagg-utlämning. Ditt engagemang för att upprätthålla våra höga säkerhetsstandarder uppskattas.</p>
                     <p>Fyll i formuläret för att få ditt godkännande:</p>
                     <form id="completionForm">
@@ -340,6 +340,9 @@
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" id="email" required>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" onclick="submitForm()">Send</button>
                         </div>
                     </form>
                 `
@@ -404,7 +407,7 @@
         } else if (slide.type === 'introduction') {
             slideContent += `<div class="button-container"><button onclick="nextSlide()">Start training</button></div>`;
         } else {
-            slideContent += `<div class="button-container"><button onclick="nextSlide()">Next</button></div>`;
+            slideContent += `<div class="button-container"><button onclick="nextSlide()">Nästa</button></div>`;
         }
     
         slideContent += `</div>`;

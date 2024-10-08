@@ -2,5 +2,5 @@
   "SMTP_SERVER": "karlshamnenergi-se.mail.protection.outlook.com",
   "SMTP_PORT": 25,
   "FROM_EMAIL": "noreply@karlshamnenergi.se",
-  "TO_EMAIL": "andreas.bergholtz@karlshamnenergi.se"
+  "TO_EMAIL": "it@karlshamnenergi.se"
 }
