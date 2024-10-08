@@ -14,10 +14,8 @@ This repository contains the Karlshamn Energi Training Portal, a web-based appli
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js with TypeScript
 - **Styling**: Tailwind CSS
 - **Server**: Node.js
-- **Process Manager**: PM2
 - **Web Server**: Nginx (Dockerized)
 - **Containerization**: Docker
 
